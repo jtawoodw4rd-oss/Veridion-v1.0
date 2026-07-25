@@ -1,41 +1,21 @@
-# Briefs API
+# Veridion v1.0
 
-FastAPI-based REST API for managing briefs, intents, queries, and evidence.
+A FastAPI-based REST API for managing briefs, intents, queries, and evidence.
 
-## Setup
+## Features
+- Create and manage briefs
+- Add intents, queries, and evidence to briefs
+- SQLite database for persistence
+- Interactive API documentation
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## API Endpoints
+- `GET /` - Root endpoint
+- `POST /briefs/` - Create a brief
+- `GET /briefs/` - Get all briefs
+- `GET /briefs/{brief_id}` - Get a specific brief
+- `DELETE /briefs/{brief_id}` - Delete a brief
+- And more for intents, queries, and evidence
 
-2. Run the application:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-
-3. Visit http://127.0.0.1:8000/docs for interactive API documentation.
-
-## Project Structure
-
-```
-app/
-├── __init__.py
-├── main.py          # FastAPI app entry point
-├── models.py        # SQLAlchemy models
-├── schemas.py       # Pydantic schemas
-├── database.py      # Database setup
-└── routers/
-    ├── __init__.py
-    ├── briefs.py
-    ├── evidence.py
-    ├── intents.py
-    └── queries.py
-```
-
-## Endpoints
-
-- **Briefs**: `/briefs`
-- **Intents**: `/intents`
-- **Queries**: `/queries`
-- **Evidence**: `/evidence`
+## Documentation
+- Swagger UI: `/docs`
+- ReDoc: `/redoc`
